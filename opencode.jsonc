@@ -1,0 +1,53 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {
+        "z.ai-conding-plan-anthropic": {
+            // Z.ai provides Anthropic-compatible API endpoints using the Anthropic SDK
+            "npm": "@ai-sdk/anthropic",
+            "options": {
+                // Base URL must use /v1 endpoint for compatibility
+                "baseURL": "https://api.z.ai/api/anthropic/v1"
+            },
+            "models": {
+                "glm-4.7": {
+                    "name": "glm-4.7"
+                },
+                "glm-5.1": {
+                    "name": "glm-5.1"
+                }
+            }
+        }
+    },
+    "mcp": {
+        // liteweight tree-sitter semantic search
+        "tree-sitter": {
+            "type": "local",
+            "command": [
+                "uvx",
+                "--from",
+                "tree-sitter-analyzer[mcp]",
+                "tree-sitter-analyzer-mcp"
+            ]
+        },
+        "context-mode": {
+            "type": "local",
+            "command": [
+                "bunx",
+                "context-mode"
+            ]
+        }
+    },
+    "lsp": {
+        // rust-analyzer comsumes a lot of memory, disable it to save resources
+        // Instead, rely on simple `cargo check` for Rust code check, you need to write it in AGENTS.md
+        "rust-analyzer": {
+            "disabled": true
+        }
+    },
+    "plugin": [
+        "context-mode"
+    ],
+    "instructions": [
+        "https://raw.githubusercontent.com/mksglu/context-mode/refs/heads/main/configs/opencode/AGENTS.md"
+    ]
+}
