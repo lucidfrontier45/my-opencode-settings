@@ -5,12 +5,21 @@ My own OpenCode Settings
 ## What's Included
 
 - Anthropic API based Z.AI coding plan provider
-- disable rust-analyzer to save resources
 - `context-mode`
 - `tree-sitter-analyzer`
 - `rtk`
-- `simple-agent-memory` skill
-- `conventional-commit` skill
+- custom Go setting with
+  - `golangci-lint`
+- custum Python setting
+  - `ruff`
+  - `ty`
+  - `pyrefly`
+- custom Rust setting
+  - disable `rust-analyzer` to save resources
+- skills
+  - `simple-agent-memory`
+  - `conventional-commit`
+  - `karpathy-guidelines`
 
 ## Instructions
 
@@ -55,6 +64,7 @@ Lastly install `tree-sitter-anlyzer` itself.
 
 1. copy `skills/*` folder to your project or `~/.agents/skills`
 2. `bunx skills add https://github.com/marcelorodrigo/agent-skills --skill conventional-commit`
+3. `bunx skills add https://github.com/szkocot/andrej-karpathy-skills --skill karpathy-guidelines`
 
 ### Custom Formatters and LSPs
 
