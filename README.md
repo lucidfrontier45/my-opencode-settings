@@ -1,4 +1,5 @@
 # my-opencode-settings
+
 My own OpenCode Settings
 
 ## What's Included
@@ -25,19 +26,45 @@ My own OpenCode Settings
 - context-mode
 - tree-sitter-analyzer
 - disable rust-analyzer to save resources
+- golangci-lint
+- ruff
+- ty
+- pyrefly (disabled by default)
 
 ### tree-sitter-analyzer dependencies
 
 Install `fd` and `ripgrep` with `grd` or `cargo-binstall`
+
 - `grd -d .local/bin/ sharkdp/fd`
 - `grd -d .local/bin/ BurntSushi/ripgrep`
 
+Lastly install `tree-sitter-anlyzer` itself.
+
+`uv tool install 'tree-sitter-analyzer[mcp]@latest'`
+
 ### RTK
 
-1. Install binary : `grd -d .local/bin/ rtk-ai/rtk` 
+1. Install binary : `grd -d .local/bin/ rtk-ai/rtk`
 2. Initialize: `rtk init -g opencode`
+
+### Context Mode
+
+`bun i -g context-mode@latest`
 
 ### Skills
 
 1. copy `skills/*` folder to your project or `~/.agents/skills`
 2. `bunx skills add https://github.com/marcelorodrigo/agent-skills --skill conventional-commit`
+
+### Custom Formatters and LSPs
+
+- [golangci-lint](https://github.com/golangci/golangci-lint)
+  - `go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest`
+- [golangci-lint-langserver](https://github.com/nametake/golangci-lint-langserver)
+  - `go install github.com/nametake/golangci-lint-langserver@latest`
+- [ruff](https://github.com/astral-sh/ruff)
+  - `uv tool install ruff@latest`
+- [ty](https://github.com/astral-sh/ty)
+  - `uv tool install ty@latset`
+- [pyrefly](https://github.com/facebook/pyrefly)
+  - `uv tool install pyrefly@latest`
