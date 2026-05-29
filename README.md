@@ -18,6 +18,7 @@ My own OpenCode Settings
   - disable `rust-analyzer` to save resources
 - skills
   - `simple-agent-memory`
+  - `ddd-layout-rules`
   - `conventional-commit`
   - `karpathy-guidelines`
 
