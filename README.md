@@ -6,7 +6,7 @@ My own OpenCode Settings
 
 - Anthropic API based Z.AI coding plan provider
 - `context-mode`
-- `tree-sitter-analyzer`
+- `codegraph`
 - `rtk`
 - custom Go setting with
   - `golangci-lint`
@@ -34,23 +34,20 @@ My own OpenCode Settings
 
 - Anthropic API based Z.AI coding plan provider
 - context-mode
-- tree-sitter-analyzer
+- codegraph
 - disable rust-analyzer to save resources
 - golangci-lint
 - ruff
 - ty
 - pyrefly (disabled by default)
 
-### tree-sitter-analyzer dependencies
+### codegraph
 
-Install `fd` and `ripgrep` with `grd` or `cargo-binstall`
+`bun i -g @colbymchenry/codegraph@latest`
 
-- `grd -d .local/bin/ sharkdp/fd`
-- `grd -d .local/bin/ BurntSushi/ripgrep`
+Check the official site to see how to index your own project.
+https://colbymchenry.github.io/codegraph/
 
-Lastly install `tree-sitter-anlyzer` itself.
-
-`uv tool install 'tree-sitter-analyzer[mcp]@latest'`
 
 ### RTK
 

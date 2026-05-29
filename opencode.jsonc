@@ -19,14 +19,18 @@
     },
   },
   "mcp": {
-    // liteweight tree-sitter semantic search
-    "tree-sitter": {
-      "type": "local",
-      "command": ["tree-sitter-analyzer-mcp"],
-    },
     "context-mode": {
       "type": "local",
       "command": ["context-mode"],
+    },
+    "codegraph": {
+      "type": "local",
+      "command": [
+        "codegraph",
+        "serve",
+        "--mcp"
+      ],
+      "enabled": true
     },
   },
   "formatter": {
@@ -76,9 +80,10 @@
       },
     },
   },
-
   // additional Context Mode settings
-  "plugin": ["context-mode"],
+  "plugin": [
+    "context-mode",
+  ],
   "instructions": [
     "https://raw.githubusercontent.com/mksglu/context-mode/refs/heads/main/configs/opencode/AGENTS.md",
   ],
