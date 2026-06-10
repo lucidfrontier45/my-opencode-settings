@@ -4,7 +4,7 @@ My own OpenCode Settings
 
 ## What's Included
 
-- Anthropic API based Z.AI coding plan provider
+- Non-Thinking variants for z.ai coding plan models
 - `context-mode`
 - `codegraph`
 - `rtk`
@@ -47,7 +47,6 @@ My own OpenCode Settings
 
 Check the official site to see how to index your own project.
 https://colbymchenry.github.io/codegraph/
-
 
 ### RTK
 
